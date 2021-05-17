@@ -18,7 +18,7 @@ public class PostmanEchoTest {
                 .post("/post")
 
                 .then()
-                .statusCode(202)
+                .statusCode(200)
                 .body(matchesJsonSchemaInClasspath("accounts.schema.json"))
                 .contentType(ContentType.JSON)
                 .body("data", equalTo("some data"));
